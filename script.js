@@ -6,6 +6,27 @@ let overall = 0
 let o_tot = 0
 let o_num = 0
 
+let cashierScore = document.getElementById('cashierScore')
+let overallScore = document.getElementById('overallScore')
+
+let showHide = document.getElementById('show-hide')
+showHide.addEventListener('click', function(){
+    let scoresDiv = document.getElementById("show-scores")
+
+    cashierScore.textContent = cashier
+    overallScore.textContent = overall
+
+    let btnText = showHide.textContent
+    if(btnText === "Display Ratings"){
+        scoresDiv.style.display = "block"
+        showHide.innerHTML = "Hide Ratings"
+    }
+    else{
+        scoresDiv.style.display = "none"
+        showHide.innerHTML = "Display Ratings"
+    }
+})
+
 cashierScoreBtn1 = document.getElementById('cashier-1')
 cashierScoreBtn1.addEventListener("click", function(){
 c_tot = c_tot + 1
